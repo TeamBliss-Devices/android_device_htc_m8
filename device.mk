@@ -242,7 +242,7 @@ PRODUCT_COPY_FILES += \
 
 # OTA ID
 PRODUCT_PROPERTY_OVERRIDES += \
-	otaupdater.otaid=liquidm8
+	otaupdater.otaid=cm_m8
 
 # Frandom init.d
 PRODUCT_COPY_FILES += \
