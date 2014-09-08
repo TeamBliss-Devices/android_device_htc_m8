@@ -37,10 +37,10 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
-import com.android.internal.util.liquid.AppHelper;
-import com.android.internal.util.liquid.ButtonsConstants;
-import com.android.internal.util.liquid.DeviceUtils;
-import com.android.internal.util.liquid.DeviceUtils.FilteredDeviceFeaturesArray;
+import com.android.internal.util.beanstalk.AppHelper;
+import com.android.internal.util.beanstalk.ButtonsConstants;
+import com.android.internal.util.beanstalk.DeviceUtils;
+import com.android.internal.util.beanstalk.DeviceUtils.FilteredDeviceFeaturesArray;
 
 import com.slim.device.R;
 import com.slim.device.util.ShortcutPickerHelper;

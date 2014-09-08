@@ -34,8 +34,8 @@ import android.view.WindowManager;
 
 import java.util.Iterator;
 
-import com.android.internal.util.liquid.ButtonsConstants;
-import com.android.internal.util.liquid.LiquidActions;
+import com.android.internal.util.beanstalk.ButtonsConstants;
+import com.android.internal.util.beanstalk.SlimActions;
 
 import com.slim.device.settings.ScreenOffGesture;
 
@@ -150,11 +150,11 @@ public class SensorService extends Service implements SensorEventListener {
         }
         if (action.equals(ButtonsConstants.ACTION_CAMERA)
                 || !action.startsWith("**")) {
-            LiquidActions.processAction(mContext, ButtonsConstants.ACTION_WAKE_DEVICE, false);
+            SlimActions.processAction(mContext, ButtonsConstants.ACTION_WAKE_DEVICE, false);
         }
         if (DEBUG) Log.d(TAG, action + ",gesture=" + gesture);
         mSensorManager.registerListener(mSensorEventListener,
                 mSensor, SensorManager.SENSOR_DELAY_FASTEST);
-        LiquidActions.processAction(mContext, action, false);
+        SlimActions.processAction(mContext, action, false);
     }
 }
