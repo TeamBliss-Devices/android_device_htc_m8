@@ -6,4 +6,4 @@ $(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
 # Inherit some common Liquid stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
-PRODUCT_NAME := liquid_m8
+PRODUCT_NAME := cm_m8
