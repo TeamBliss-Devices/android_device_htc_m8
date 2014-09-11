@@ -35,17 +35,17 @@ public class DotcaseConstants {
      */
     enum Notification {
         EMAIL,
-        GMAIL,
-        HANGOUTS,
         TWITTER,
         MISSED_CALL,
         MMS,
         VOICEMAIL,
+        COUPLES,
+        GMAIL,
+        HANGOUTS,
         SNAPCHAT,
         FACEBOOK,
+        FB_MESSENGER,
         KIK,
-        MESSENGER,
-        COUPLES,
         DOTS
     }
 
@@ -150,12 +150,6 @@ public class DotcaseConstants {
         notificationMap.put("com.maildroid.pro", Notification.EMAIL);
         notificationMap.put("com.fsck.k9", Notification.EMAIL);
 
-        // Gmail apps
-        notificationMap.put("com.google.android.gm", Notification.GMAIL);
-
-        // Hangouts apps
-        notificationMap.put("com.google.android.talk", Notification.HANGOUTS);
-
         // Twitter apps
         notificationMap.put("com.twitter.android", Notification.TWITTER);
         notificationMap.put("com.dotsandlines.carbon", Notification.TWITTER);
@@ -177,20 +171,18 @@ public class DotcaseConstants {
         // Voicemail apps
         notificationMap.put("com.google.android.apps.googlevoice", Notification.VOICEMAIL);
 
-        // Snapchat
-        notificationMap.put("com.snapchat.android", Notification.SNAPCHAT);
-
-        // Facebook apps
-        notificationMap.put("com.facebook.katana", Notification.FACEBOOK);
-
         // Couples apps
         notificationMap.put("com.tenthbit.juliet", Notification.COUPLES); // Couple
         notificationMap.put("io.avocado.android", Notification.COUPLES);
         notificationMap.put("kr.co.vcnc.android.couple", Notification.COUPLES); // Between
 
-        // Messaging apps
-        notificationMap.put("kik.android", Notification.KIK); // KIK
-        notificationMap.put("com.facebook.orca", Notification.MESSENGER); // Facebook Messenger
+	// Other apps
+        notificationMap.put("com.google.android.gm", Notification.GMAIL);
+        notificationMap.put("com.google.android.talk", Notification.HANGOUTS);
+        notificationMap.put("com.snapchat.android", Notification.SNAPCHAT);
+        notificationMap.put("com.facebook.katana", Notification.FACEBOOK);
+        notificationMap.put("com.facebook.orca", Notification.FB_MESSENGER);
+        notificationMap.put("kik.android", Notification.KIK);
     }
 
     /**
@@ -307,15 +299,15 @@ public class DotcaseConstants {
         {0, 3, 0, 0, 3, 0, 0, 0},
         {0, 3, 0, 0, 0, 3, 0, 0}};
 
-    static final int[][] messengerSprite = {
-        {0, 9, 9, 9, 9, 9, 0},
-        {9, 9, 9, 9, 9, 9, 9},
-        {9, 9, 1, 9, 9, 9, 9},
-        {9, 1, 9, 1, 9, 1, 9},
-        {9, 9, 9, 9, 1, 9, 9},
-        {0, 9, 9, 9, 9, 9, 0},
-        {0, 0, 9, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0}};
+    static final int[][] facebookMessengerSprite = {
+        { 0, 14, 14, 14, 14, 14,  0},
+        {14, 14, 14, 14, 14, 14, 14},
+        {14, 14,  1, 14, 14, 14, 14},
+        {14,  1, 14,  1, 14,  1, 14},
+        {14, 14, 14, 14,  1, 14, 14},
+        {14, 14, 14, 14, 14, 14, 14},
+        { 0, 14, 14, 14, 14, 14,  0},
+        { 0,  0, 14,  0,  0,  0,  0}};
 
     static final int[][] dotsSprite = {
         {0, 0, 0, 0, 0, 0, 0},
@@ -351,8 +343,8 @@ public class DotcaseConstants {
                 return couplesSprite;
             case KIK:
                 return kikSprite;
-            case MESSENGER:
-                return messengerSprite;
+            case FB_MESSENGER:
+                return facebookMessengerSprite;
             case DOTS:
                 return dotsSprite;
             default:

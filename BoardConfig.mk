@@ -28,7 +28,7 @@
 # 0P6B20000 - Verizon
 # 0P6B70000 - Sprint
 
-TARGET_OTA_ASSERT_DEVICE := m8,m8ul,m8_ul,m8wl,m8wlv,m8vzw,m8whl,m8spr
+TARGET_OTA_ASSERT_DEVICE := m8,m8wl,m8wlv,m8vzw,m8whl,m8spr
 
 BOARD_VENDOR := htc
 
@@ -43,7 +43,6 @@ TARGET_BOARD_PLATFORM_GPU := qcom-adreno330
 # Architecture
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
-TARGET_ARCH_VARIANT_CPU := cortex-a15
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_SMP := true
@@ -54,7 +53,7 @@ TARGET_USE_KRAIT_BIONIC_OPTIMIZATION := true
 COMMON_GLOBAL_CFLAGS += -DHTCLOG
 
 # Kernel
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=qcom user_debug=31 ehci-hcd.park=3 zcache androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=qcom user_debug=31 ehci-hcd.park=3 zcache
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_SEPARATED_DT := true
@@ -62,8 +61,6 @@ BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x02008000 -
 BOARD_CUSTOM_BOOTIMG_MK := device/htc/m8/mkbootimg.mk
 TARGET_KERNEL_CONFIG := cm_m8_defconfig
 TARGET_KERNEL_SOURCE := kernel/htc/msm8974
-TARGET_GCC_VERSION_ARM := 4.10-sm
-TARGET_GCC_VERSION_AND := 4.8-sm
 
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
@@ -109,7 +106,6 @@ BOARD_NFC_HAL_SUFFIX := msm8974
 
 # Power
 TARGET_POWERHAL_VARIANT := qcom
-TARGET_POWERHAL_NO_TOUCH_BOOST := true
 
 # RIL
 BOARD_PROVIDES_LIBRIL := true
@@ -185,9 +181,6 @@ TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TARGET_UNIFIED_DEVICE := true
 TARGET_INIT_VENDOR_LIB := libinit_m8
 TARGET_LIBINIT_DEFINES_FILE := device/htc/m8/init/init_m8.c
-
-# External apps on SD
-TARGET_EXTERNAL_APPS = sdcard1
 
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := device/htc/m8/releasetools
