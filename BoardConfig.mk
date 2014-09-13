@@ -43,6 +43,7 @@ TARGET_BOARD_PLATFORM_GPU := qcom-adreno330
 # Architecture
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
+TARGET_ARCH_VARIANT_CPU := cortex-a15
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_SMP := true
@@ -61,6 +62,8 @@ BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x02008000 -
 BOARD_CUSTOM_BOOTIMG_MK := device/htc/m8/mkbootimg.mk
 TARGET_KERNEL_CONFIG := cm_m8_defconfig
 TARGET_KERNEL_SOURCE := kernel/htc/msm8974
+TARGET_GCC_VERSION_ARM := 4.10-sm
+TARGET_GCC_VERSION_AND := 4.8-sm
 
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
@@ -72,6 +75,7 @@ TARGET_USES_QCOM_BSP := true
 
 # Audio
 AUDIO_FEATURE_DISABLED_MULTI_VOICE_SESSIONS := true
+AUDIO_FEATURE_SEPARATE_SPKR_BACKEND := true
 BOARD_AUDIO_AMPLIFIER := device/htc/m8/libaudioamp
 BOARD_USES_ALSA_AUDIO := true
 
@@ -106,6 +110,7 @@ BOARD_NFC_HAL_SUFFIX := msm8974
 
 # Power
 TARGET_POWERHAL_VARIANT := qcom
+TARGET_POWERHAL_NO_TOUCH_BOOST := true
 
 # RIL
 BOARD_PROVIDES_LIBRIL := true
@@ -187,3 +192,6 @@ TARGET_RELEASETOOLS_EXTENSIONS := device/htc/m8/releasetools
 
 # Hardware
 BOARD_HARDWARE_CLASS := device/htc/m8/cmhw
+
+# External apps on SD
+TARGET_EXTERNAL_APPS = sdcard1
