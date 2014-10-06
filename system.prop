@@ -50,6 +50,7 @@ tunnel.audio.encode=true
 af.resampler.quality=4
 persist.call_recording.enabled=true
 persist.call_recording.src=1
+use.voice.path.for.pcm.voip=false
 
 # AV
 media.aac_51_output_enabled=true
