@@ -23,8 +23,4 @@
     "target_path": "hardware/qcom/media-caf-new",
     "revision": "kitkat"
   },
-  {
-    "repository": "android_vendor_htc",
-    "target_path": "vendor/htc",
-  }
 ]
