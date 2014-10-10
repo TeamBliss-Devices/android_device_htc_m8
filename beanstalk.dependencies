@@ -6,12 +6,6 @@
     "revision": "kk4.4"
   },
   {
-    "remote": "lsd",
-    "repository": "android_device_qcom_common",
-    "target_path": "device/qcom/common",
-    "revision": "kitkat"
-  },
-  {
     "remote": "ls",
     "repository": "android_hardware_qcom_display-caf-new",
     "target_path": "hardware/qcom/display-caf-new",
@@ -23,4 +17,10 @@
     "target_path": "hardware/qcom/media-caf-new",
     "revision": "kitkat"
   },
+  {
+    "remote": "du",
+    "repository": "android_device_qcom_common",
+    "target_path": "device/qcom/common",
+    "revision": "du44"
+  }  
 ]
