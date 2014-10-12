@@ -1,8 +1,5 @@
 # system.prop for m8
 
-ro.product.device=m8
-ro.product.model=One M8
-
 # RIL
 rild.libargs=-d /dev/smd0
 rild.libpath=/vendor/lib/libril-qc-qmi-1.so
