@@ -50,6 +50,14 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     ueventd.qcom.rc
 
+# Recovery
+PRODUCT_PACKAGES += \
+    lpm.rc \
+    choice_fn \
+    offmode_charging \
+    offmode_charging_res_images \
+    offmode_charging_warn_res_images
+
 # Qcom init scripts for /etc
 PRODUCT_PACKAGES += \
    init.qcom.bt.bluedroid.sh \
@@ -105,7 +113,6 @@ PRODUCT_PACKAGES += \
 # Audio configuration
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf \
-    $(LOCAL_PATH)/audio/audio_effects.conf:system/etc/audio_effects.conf \
     $(LOCAL_PATH)/audio/audio_platform_info.xml:system/etc/audio_platform_info.xml \
     $(LOCAL_PATH)/audio/audio_policy.conf:system/etc/audio_policy.conf \
     $(LOCAL_PATH)/audio/mixer_paths.xml:system/etc/mixer_paths.xml \
