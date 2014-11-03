@@ -21,6 +21,6 @@
      for different hardware and product builds. -->
 <resources>
 
-    <string name="conf_update_server_url_def" translatable="false">http://teambliss.x10host.com/BlissStalk/Devices/m8/</string>
+    <string name="conf_update_server_url_def" translatable="false">http://teambliss.x10host.com/BlissStalk/Devices/m8/ota/</string>
 
 </resources>
