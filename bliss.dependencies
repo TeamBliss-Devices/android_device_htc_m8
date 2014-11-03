@@ -12,21 +12,21 @@
     "revision": "kk4.4"
   },
   {
-    "remote": "ls",
+    "remote": "cm",
     "repository": "android_hardware_qcom_display-caf-new",
     "target_path": "hardware/qcom/display-caf-new",
-    "revision": "m8"
+    "revision": "cm-11.0"
   },
   {
-    "remote": "ls",
+    "remote": "cm",
     "repository": "android_hardware_qcom_media-caf-new",
     "target_path": "hardware/qcom/media-caf-new",
-    "revision": "kitkat"
+    "revision": "cm-11.0"
   },
   {
-    "remote": "du",
+    "remote": "cm",
     "repository": "android_device_qcom_common",
     "target_path": "device/qcom/common",
-    "revision": "du44"
+    "revision": "cm-11.0"
   }  
 ]
