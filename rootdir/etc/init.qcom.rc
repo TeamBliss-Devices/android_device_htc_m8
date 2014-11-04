@@ -65,6 +65,9 @@ on init
     symlink /storage/usbdisk /usbdisk
     symlink /storage/usbdisk /mnt/usbdisk
 
+# init power features
+    chown system /sys/power/wait_for_fb_status
+
 # HTC SSD Battery - BEGIN
     chown system system /sys/class/power_supply/battery/full_level_dis_batt_chg
     chmod 0220 /sys/class/power_supply/battery/full_level_dis_batt_chg
@@ -81,6 +84,9 @@ on init
     # permissions for NFC
     chown nfc nfc /sys/class/NFC_sensor/comn/nxp_uicc_swp
     chmod 0664 /sys/class/NFC_sensor/comn/nxp_uicc_swp
+
+# Vibrator permission
+    chown system /sys/devices/virtual/timed_output/vibrator/voltage_level
 
 on fs
     mkdir /devlog 0700 root root
@@ -180,6 +186,14 @@ on post-fs-data
 
     #Create a folder for SRS to be able to create a usercfg file
     mkdir /data/data/media 0770 media media
+
+    # Hardware tunables
+    chown root system /sys/devices/platform/kcal_ctrl.0/kcal
+    chown root system /sys/devices/platform/kcal_ctrl.0/kcal_ctrl
+    chmod 0664 /sys/devices/platform/kcal_ctrl.0/kcal
+    chmod 0664 /sys/devices/platform/kcal_ctrl.0/kcal_ctrl
+    restorecon /sys/devices/platform/kcal_ctrl.0/kcal
+    restorecon /sys/devices/platform/kcal_ctrl.0/kcal_ctrl
 
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
@@ -449,9 +463,9 @@ service map1_del /system/bin/sdptool del 0x1ff17
     oneshot
 
 service mpdecision /system/bin/mpdecision --avg_comp
-    class core
-    user root
-    disabled
+   class main
+   user root
+   group system
 
 service netmgrd /system/bin/netmgrd
     class core
@@ -608,7 +622,6 @@ on property:service.bootanim.exit=1
     write /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq "300000"
     chown system /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
     chown system /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
-    write /sys/kernel/mm/ksm/deferred_timer "1"
     chown root.system /sys/devices/system/cpu/mfreq
     chmod 220 /sys/devices/system/cpu/mfreq
     chown root.system /sys/devices/system/cpu/cpu1/online
@@ -619,63 +632,30 @@ on property:service.bootanim.exit=1
     chmod 664 /sys/devices/system/cpu/cpu3/online
     write /dev/cpuctl/apps/cpu.notify_on_migrate "1"
 
-    write /sys/module/cpu_boost/parameters/boost_ms "20"
-    write /sys/module/cpu_boost/parameters/sync_threshold "1728000"
-    write /sys/module/cpu_boost/parameters/input_boost_freq "1497600"
-    write /sys/module/cpu_boost/parameters/input_boost_ms "40"
-
 on property:init.svc.bootanim=running
-    # Switch to NOOP and performance mode while booting
-    setprop sys.perf.profile 2
     write /sys/block/mmcblk0/queue/scheduler noop
 
 on property:init.svc.bootanim=stopped
     # Switch to ROW and balanced mode after boot for better UX
-    setprop sys.perf.profile 1
-    write /sys/block/mmcblk0/queue/scheduler row
-
-# CM Performance Profiles
-on property:sys.perf.profile=0
-    write /sys/class/devfreq/qcom,cpubw.42/governor "powersave"
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor conservative
-    write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor conservative
-    write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor conservative
-    write /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor conservative
-    write /sys/class/kgsl/kgsl-3d0/devfreq/governor msm-adreno-tz
-    start mpdecision
-
-on property:sys.perf.profile=1
-    write /sys/class/devfreq/qcom,cpubw.42/governor "msm_cpufreq"
+    write /sys/class/devfreq/qcom,cpubw.40/governor "cpubw_hwmon"
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "interactive"
     write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor "interactive"
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor "interactive"
     write /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor "interactive"
-
     write /sys/devices/system/cpu/cpufreq/interactive/above_hispeed_delay "20000 1400000:40000 1700000:20000"
     write /sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load 90
     write /sys/devices/system/cpu/cpufreq/interactive/hispeed_freq 1190400
-    write /sys/devices/system/cpu/cpufreq/interactive/io_is_busy 0
+    write /sys/devices/system/cpu/cpufreq/interactive/io_is_busy 1
     write /sys/devices/system/cpu/cpufreq/interactive/target_loads "85 1500000:90 1800000:70"
-    write /sys/devices/system/cpu/cpufreq/interactive/min_sample_time 40000
-    write /sys/devices/system/cpu/cpufreq/interactive/timer_rate 30000
+    write /sys/devices/system/cpu/cpufreq/interactive/min_sample_time "40000 1700000:80000"
     write /sys/devices/system/cpu/cpufreq/interactive/sampling_down_factor 100000
-    write /sys/devices/system/cpu/cpufreq/interactive/timer_slack 30000
-    write /sys/devices/system/cpu/cpufreq/interactive/up_threshold_any_cpu_load 50
-    write /sys/devices/system/cpu/cpufreq/interactive/sync_freq 1036800
-    write /sys/devices/system/cpu/cpufreq/interactive/up_threshold_any_cpu_freq 1190400
+
+    write /sys/module/cpu_boost/parameters/boost_ms 20
+    write /sys/module/cpu_boost/parameters/sync_threshold 1190400
+    write /sys/module/cpu_boost/parameters/input_boost_freq 1190400
+    write /sys/module/cpu_boost/parameters/input_boost_ms 40
 
     write /sys/class/kgsl/kgsl-3d0/devfreq/governor msm-adreno-tz
-    start mpdecision
+    write /dev/cpuctl/apps/cpu.notify_on_migrate 1
 
-on property:sys.perf.profile=2
-    stop mpdecision
-    write /sys/devices/system/cpu/cpu0/online 1
-    write /sys/devices/system/cpu/cpu1/online 1
-    write /sys/devices/system/cpu/cpu2/online 1
-    write /sys/devices/system/cpu/cpu3/online 1
-    write /sys/class/devfreq/qcom,cpubw.42/governor "performance"
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor performance
-    write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor performance
-    write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor performance
-    write /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor performance
-    write /sys/class/kgsl/kgsl-3d0/devfreq/governor performance
+    write /sys/block/mmcblk0/queue/scheduler row
