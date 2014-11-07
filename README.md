@@ -1,5 +1,5 @@
 Copyright 2014 - The CyanogenMod Project
-Copyright 2014 - The LiquidSmooth Project
+Copyright 2014 - The BlissStalk Open Source Project
 
 Device configuration for HTC One M8.
 
