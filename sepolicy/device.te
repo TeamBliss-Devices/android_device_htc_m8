@@ -1,15 +1,1 @@
-<<<<<<< HEAD
-# BT lock device for BCM4335
-type btlock_device, dev_type;
-
-# Qualcomm Secure Execution Environment Communicator (QSEECOM) device
-type qseecom_device, dev_type;
-
-# Qualcomm MSM Audio ACDB device
-type msm_acdb_device, dev_type;
-
-# Kickstart device used by QC qcks
-type kickstart_device, dev_type;
-=======
 type cir_device, dev_type;
->>>>>>> d89d8a1... sepolicy: add device specific-sepolicies
