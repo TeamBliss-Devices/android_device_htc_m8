@@ -93,7 +93,6 @@ void vendor_load_properties()
         property_set("persist.radio.snapshot_enabled", "1");
         property_set("persist.radio.snapshot_timer", "22");
         property_set("persist.radio.mode_pref_nv10", "1");
-        property_set("ro.ril.scan.selection.rat", "1");
         property_set("persist.radio.always_send_plmn", "true");
         property_set("ro.ril.enable.sdr", "0");
         property_set("ro.ril.set.mtusize", "1422");
