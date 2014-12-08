@@ -82,8 +82,8 @@ void vendor_load_properties()
         cdma_properties("1", "10", "310120", "Sprint");
         property_set("ro.build.fingerprint", "htc/sprint_wwe/htc_m8whl:4.4.4/KTU84P/393205.2:user/release-keys");
         property_set("ro.build.description", "3.30.654.2 CL393205 release-keys");
-        property_set("ro.product.device", "m8spr");
-        property_set("ro.build.product", "m8spr");
+        property_set("ro.product.device", "htc_m8whl");
+        property_set("ro.build.product", "htc_m8whl");
         property_set("telephony.sms.pseudo_multipart", "1");
         property_set("ro.telephony.default_network", "10");
         property_set("telephony.lteOnCdmaDevice", "1");
