@@ -80,24 +80,15 @@ void vendor_load_properties()
         property_set("ro.telephony.get_imsi_from_sim", "true");
     } else if (strstr(bootmid, "0P6B70000")) {
         /* m8spr (m8whl) */
-        cdma_properties("1", "10", "310120", "Sprint");
+        cdma_properties("1", "8", "310120", "Sprint");
         property_set("ro.build.fingerprint", "htc/sprint_wwe/htc_m8whl:4.4.4/KTU84P/393205.2:user/release-keys");
-        property_set("ro.build.description", "3.30.654.2 CL393205 release-keys");
+        property_set("ro.build.description", "3.30.651.2 CL393205 release-keys");
         property_set("ro.product.device", "htc_m8whl");
         property_set("ro.build.product", "htc_m8whl");
         property_set("telephony.sms.pseudo_multipart", "1");
-        property_set("ro.telephony.default_network", "10");
-        property_set("telephony.lteOnCdmaDevice", "1");
-        property_set("ro.ril.oem.ecclist", "911");
         property_set("ro.ril.enable.pre_r8fd=1", "1");
-        property_set("persist.radio.apm_sim_not_pwdn", "1");
-        property_set("persist.radio.snapshot_enabled", "1");
-        property_set("persist.radio.snapshot_timer", "22");
-        property_set("persist.radio.mode_pref_nv10", "1");
-        property_set("persist.radio.always_send_plmn", "true");
-        property_set("ro.ril.enable.sdr", "0");
+        property_set("ro.ril.oem.ecclist", "911");
         property_set("ro.ril.set.mtusize", "1422");
-        property_set("keyguard.no_require_sim", "1");
     } else {
         /* m8 */
         property_set("ro.build.fingerprint", "htc/m8_google/htc_m8:5.0.1/LRX22C.H5/434277:user/release-keys");
