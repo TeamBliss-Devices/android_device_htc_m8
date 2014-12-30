@@ -325,8 +325,5 @@
         <item>gprs:4092,8760,11680,4096,8760,11680</item>
         <item>evdo_b:4094,87380,262144,4096,16384,262144</item>
     </string-array>
-    
-    <!-- Wether doze feature is enabled by default in settings. -->
-    <bool name="config_doze_enabled_by_default">false</bool>    
 
 </resources>
