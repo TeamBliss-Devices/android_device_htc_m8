@@ -207,8 +207,9 @@ TARGET_RELEASETOOLS_EXTENSIONS := device/htc/m8/releasetools
 # Hardware
 BOARD_HARDWARE_CLASS := device/htc/m8/cmhw
 
-# BlissPop Cinfigs
+# BlissPop Configs
 Bliss_Build_Block := 1
+BLISSIFY := true
 
 # Buck targets
 FEATURE_CAMERA_LEVEL_FULL := true
