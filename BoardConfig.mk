@@ -208,7 +208,6 @@ TARGET_RELEASETOOLS_EXTENSIONS := device/htc/m8/releasetools
 BOARD_HARDWARE_CLASS := device/htc/m8/cmhw
 
 # BlissPop Configs
-Bliss_Build_Block := 1
 BLISSIFY := true
 
 # Buck targets
