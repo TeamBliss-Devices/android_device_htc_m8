@@ -213,6 +213,7 @@ TARGET_TC_KERNEL := 4.10-linaro
 BLISSIFY := true
 BLISS_O3 := true
 BLISS_STRICT := true
+BLISS_GRAPHITE := true
 
 # Buck targets
 FEATURE_CAMERA_LEVEL_FULL := true
