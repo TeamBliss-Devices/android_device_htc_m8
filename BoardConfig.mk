@@ -62,8 +62,6 @@ BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x02008000 -
 BOARD_CUSTOM_BOOTIMG_MK := device/htc/m8/mkbootimg.mk
 TARGET_KERNEL_CONFIG := cm_m8_defconfig
 TARGET_KERNEL_SOURCE := kernel/htc/msm8974
-TARGET_GCC_VERSION_EXP := 4.9
-
 
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
@@ -209,8 +207,12 @@ TARGET_RELEASETOOLS_EXTENSIONS := device/htc/m8/releasetools
 # Hardware
 BOARD_HARDWARE_CLASS := device/htc/m8/cmhw
 
-# BlissPop Configs
+# BlissPop Config Flags
+TARGET_TC_ROM := 4.8
+TARGET_TC_KERNEL := 4.10-linaro
 BLISSIFY := true
+BLISS_O3 := true
+BLISS_STRICT := true
 
 # Buck targets
 FEATURE_CAMERA_LEVEL_FULL := true
