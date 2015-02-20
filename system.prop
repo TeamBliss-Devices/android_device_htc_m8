@@ -87,8 +87,3 @@ persist.sys.usb.config=mtp
 
 # Wifi
 wifi.interface=wlan0
-
-#SaberMod
-ro.sm.android=$(TARGET_TC_ROM)
-ro.sm.kernel=$(TARGET_TC_ROM)
-ro.sm.flags=$(GCC_OPTIMIZATION_LEVELS)
