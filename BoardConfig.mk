@@ -215,6 +215,7 @@ BLISSIFY := true
 BLISS_O3 := true
 BLISS_STRICT := true
 BLISS_GRAPHITE := true
+BLISS_KRAIT := true
 
 # Buck targets
 FEATURE_CAMERA_LEVEL_FULL := true
