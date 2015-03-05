@@ -207,13 +207,13 @@ TARGET_RELEASETOOLS_EXTENSIONS := device/htc/m8/releasetools
 BOARD_HARDWARE_CLASS := device/htc/m8/cmhw
 
 # BlissPop Config Flags
-TARGET_TC_ROM := 4.8
-TARGET_TC_KERNEL := 4.10-linaro
+TARGET_TC_ROM := 4.9-linaro
+TARGET_TC_KERNEL := 4.9-linaro
 BLISSIFY := true
 BLISS_O3 := true
 BLISS_STRICT := true
 BLISS_GRAPHITE := true
-BLISS_KRAIT := true
+BLISS_KRAIT := false
 
 # Buck targets
 FEATURE_CAMERA_LEVEL_FULL := true
