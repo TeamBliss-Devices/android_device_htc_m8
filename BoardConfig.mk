@@ -209,10 +209,10 @@ BOARD_HARDWARE_CLASS := device/htc/m8/cmhw
 # BlissPop Config Flags
 TARGET_TC_ROM := 4.8-sm
 TARGET_TC_KERNEL := 4.9-sm
-BLISSIFY := false
+BLISSIFY := true
 BLISS_O3 := true
 BLISS_STRICT := true
-BLISS_GRAPHITE := true
+BLISS_GRAPHITE := false
 BLISS_KRAIT := false
 BLISS_PIPE := true
 TARGET_GCC_VERSION_EXP := $(TARGET_TC_ROM)
