@@ -87,8 +87,3 @@ persist.sys.usb.config=mtp
 
 # Wifi
 wifi.interface=wlan0
-
-# GCC Build Prop Lines
-ro.sm.flags=Extreme
-ro.sm.android=4.9-linaro
-ro.sm.kernel=4.9-linaro
