@@ -203,17 +203,17 @@ BOARD_HARDWARE_CLASS := device/htc/m8/cmhw
 
 # BlissPop Config Flags
 #BLISS_WIPE_CACHES := 1
-#TARGET_TC_ROM := 4.9-linaro
-#TARGET_TC_KERNEL := 5.0-linaro
-#BLISSIFY := true
+TARGET_TC_ROM := 4.8
+TARGET_TC_KERNEL := 4.8
+BLISSIFY := true
 #BLISS_O3 := true
 #BLISS_STRICT := true
 #BLISS_GRAPHITE := false
 #BLISS_KRAIT := true
 #BLISS_PIPE := true
-#TARGET_GCC_VERSION_EXP := $(TARGET_TC_ROM)
-#TARGET_KERNEL_CUSTOM_TOOLCHAIN := $(TARGET_TC_KERNEL)
+TARGET_GCC_VERSION_EXP := $(TARGET_TC_ROM)
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := $(TARGET_TC_KERNEL)
 
 #SaberMod
-#-include vendor/bliss/config/sm.mk
+-include vendor/bliss/config/sm.mk
 
