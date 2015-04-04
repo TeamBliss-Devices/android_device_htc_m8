@@ -202,7 +202,7 @@ TARGET_RELEASETOOLS_EXTENSIONS := device/htc/m8/releasetools
 BOARD_HARDWARE_CLASS := device/htc/m8/cmhw
 
 # BlissPop Config Flags
-#BLISS_WIPE_CACHES := 1
+BLISS_WIPE_CACHES := 1
 TARGET_TC_ROM := 4.8
 TARGET_TC_KERNEL := 4.8
 BLISSIFY := true
