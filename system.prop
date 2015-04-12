@@ -2,8 +2,6 @@
 
 ro.product.device= M8
 ro.product.model=One M8
-ro.cm.version=12
-ro.cm.releasetype=Bliss
 
 # RIL
 rild.libargs=-d /dev/smd0
