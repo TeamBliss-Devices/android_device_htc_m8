@@ -202,9 +202,9 @@ TARGET_RELEASETOOLS_EXTENSIONS := device/htc/m8/releasetools
 # Hardware
 BOARD_HARDWARE_CLASS := device/htc/m8/cmhw
 
-WITH_DEXPREOPT := true
-WITH_DEXPREOPT_PIC :=true
-WITH_DEXPREOPT_COMP :=true
+#WITH_DEXPREOPT := true
+#WITH_DEXPREOPT_PIC :=true
+#WITH_DEXPREOPT_COMP :=true
 
 # BlissPop Config Flags
 BLISS_WIPE_CACHES := 1
