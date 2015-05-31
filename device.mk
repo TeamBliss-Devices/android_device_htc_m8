@@ -141,10 +141,6 @@ PRODUCT_PACKAGES += \
     ebtables \
     ethertypes
 
-# Kernel Configuration
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/bin/pnpmgr:system/bin/pnpmgr
-    
 # Keylayouts and Keychars
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/keypad_8974.kl:system/usr/keylayout/keypad_8974.kl \
