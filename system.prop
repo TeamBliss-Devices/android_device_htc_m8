@@ -88,3 +88,4 @@ persist.sys.usb.config=mtp
 
 # Wifi
 wifi.interface=wlan0
+wifi.supplicant_scan_interval=180
