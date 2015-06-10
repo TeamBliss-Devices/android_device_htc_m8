@@ -1,5 +1,5 @@
--app/CIRModule/CIRModule.apk:app/CIRModule.apk
--app/QuickBoot/QuickBoot.apk:app/QuickBoot.apk
+-app/CIRModule/CIRModule.apk:app/CIRModule/CIRModule.apk
+-app/QuickBoot/QuickBoot.apk:app/QuickBoot/QuickBoot.apk
 bin/adsprpcd
 bin/ATFWD-daemon
 bin/cir_fw_update
