@@ -21,4 +21,4 @@
 NUMCORES=`getconf _NPROCESSORS_ONLN`
 JSYNC=`echo $(( $NUMCORES * 2 ))`
 
-repo sync -j$JSYNC && . build/envsetup.sh && lunch omni_m8-eng && make -j$JSYNC bacon 
+repo sync -j$JSYNC && . build/envsetup.sh && lunch bliss_m8-userdebug && make -j$JSYNC bacon 
