@@ -13,7 +13,7 @@ case $modelid in
 esac
 
 # CDMA variants need a slight change to their gps.conf
-if [ "$variant" == "vzw" ] || [ "$variant" == "spr" ]; then
+if [ "$variant" == "vzw" ] || [ "$variant" == "spr" ] || [ "$variant" == "dwg" ]; then
   sed -i "s|PHONE_TYPE=UMTS|PHONE_TYPE=CDMA|g" /system/etc/gps.conf
 fi
 

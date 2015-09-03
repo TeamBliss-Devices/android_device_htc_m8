@@ -14,6 +14,8 @@
 # limitations under the License.
 #
 
+ifneq ($(filter m8 m8d,$(TARGET_DEVICE)),)
+
 LOCAL_PATH := $(call my-dir)
 
 ifeq ($(BOARD_VENDOR),htc)
