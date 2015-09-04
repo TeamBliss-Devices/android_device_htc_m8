@@ -39,8 +39,8 @@ import android.view.MenuItem;
 
 import com.android.internal.util.bliss.AppHelper;
 import com.android.internal.util.bliss.ActionConstants;
-import com.android.internal.util.bliss.DeviceUtils;
-import com.android.internal.util.bliss.DeviceUtils.FilteredDeviceFeaturesArray;
+import com.android.internal.util.bliss.ActionUtils;
+import com.android.internal.util.bliss.ActionUtils.FilteredDeviceFeaturesArray;
 
 import com.slim.device.R;
 import com.slim.device.util.ShortcutPickerHelper;
@@ -100,7 +100,7 @@ public class ScreenOffGesture extends PreferenceFragment implements
             return;
         }
         sFinalActionDialogArray = new FilteredDeviceFeaturesArray();
-        sFinalActionDialogArray = DeviceUtils.filterUnsupportedDeviceFeatures(getActivity(),
+        sFinalActionDialogArray = ActionUtils.filterUnsupportedDeviceFeatures(getActivity(),
                 settingsResources.getStringArray(
                         settingsResources.getIdentifier(SETTINGS_METADATA_NAME
                         + ":array/shortcut_action_screen_off_values", null, null)),
