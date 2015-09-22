@@ -1,0 +1,5 @@
+
+# system.prop for m8
+
+ro.product.device= M8
+ro.product.model=One M8

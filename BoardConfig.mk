@@ -68,7 +68,7 @@ TARGET_LIBINIT_DEFINES_FILE := device/htc/m8/init/init_m8.c
 # USE_MINIKIN := true
 
 # Block_Build
-# Bliss_Build_Block := 1 
+BLISS_BUILD_BLOCK := 1 
 
 # BlissPop Config Flags
 BLISS_WIPE_CACHES := 1
@@ -87,8 +87,8 @@ BLISS_PIPE := true
 # Link_Time_Optimizations := true
 # TARGET_USE_ION_COMPAT := true
 # TARGET_USE_KRAIT_PLD_SET := true
-TARGET_TC_ROM := 5.1-linaro
 TARGET_TC_KERNEL := 4.8
+TARGET_TC_ROM := 5.2-linaro
 TARGET_GCC_VERSION_EXP := $(TARGET_TC_ROM)
 TARGET_KERNEL_CUSTOM_TOOLCHAIN := $(TARGET_TC_KERNEL)
 TARGET_ENABLE_UKM := true
