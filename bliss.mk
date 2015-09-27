@@ -9,4 +9,4 @@ $(call inherit-product, vendor/bliss/config/common_full_phone.mk)
 PRODUCT_NAME := bliss_m8
 
 #Bliss Audio Mod
-#BLISS_AUDIO_MOD := viper
+BLISS_AUDIO_MOD := viper
