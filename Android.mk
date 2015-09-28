@@ -61,3 +61,4 @@ $(shell mkdir -p $(TARGET_OUT)/etc/firmware/wlan/prima; \
 
 endif
 endif
+endif
