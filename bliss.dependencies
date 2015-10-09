@@ -1,13 +1,15 @@
 [
   {
-    "remote":      "cm",
-    "repository":  "android_vendor_cm",
-    "target_path": "vendor/cm",
-    "revision":    "cm-12.1"
+    "remote":      "TeamBliss-Devices",
+    "repository": "android_device_htc_m8-common",
+    "target_path": "device/htc/m8-common",
+    "revision":    "lp5.1"
   },
   {
-    "repository": "android_device_htc_m8-common",
-    "target_path": "device/htc/m8-common"
+    "remote":      "TeamBliss-Devices",
+    "repository": "android_device_htc_msm8974-common",
+    "target_path": "device/htc/msm8974-common",
+    "revision":    "lp5.1"
   },
   {
     "remote":      "TeamBliss-Devices",
@@ -26,7 +28,9 @@
     "revision":    "cm-12.1"
   },
  {
+    "remote":      "TeamBliss-Devices",
     "repository": "android_device_htc_m8",
-    "target_path": "device/htc/m8"
+    "target_path": "device/htc/m8",
+    "revision":    "lp5.1-split"
   }
 ]
